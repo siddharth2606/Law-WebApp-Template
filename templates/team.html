@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Our Attorneys - Kanun Law Firm</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Law Firm Website Template" name="keywords">
+        <meta content="Law Firm Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top Bar Start -->
+            <div class="top-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="logo">
+                                <a href="{{ url_for('index') }}">
+                                    <h1>Kanun</h1>
+                                    <!-- <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="top-bar-right">
+                                <div class="text">
+                                    <h2>8:00 - 9:00</h2>
+                                    <p>Opening Hour Mon - Fri</p>
+                                </div>
+                                <div class="text">
+                                    <h2>+123 456 7890</h2>
+                                    <p>Call Us For Free Consultation</p>
+                                </div>
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- Nav Bar Start -->
+            <div class="nav-bar">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                        <a href="#" class="navbar-brand">MENU</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto">
+                                <a href="{{ url_for('index') }}" class="nav-item nav-link">Home</a>
+                                <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
+                                <a href="{{ url_for('service') }}" class="nav-item nav-link">Practice</a>
+                                <a href="{{ url_for('team') }}" class="nav-item nav-link active">Attorneys</a>
+                                <a href="{{ url_for('portfolio') }}" class="nav-item nav-link">Case Studies</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                    <div class="dropdown-menu">
+                                        <a href="{{ url_for('blog') }}" class="dropdown-item">Blog Page</a>
+                                        <a href="{{ url_for('single') }}" class="dropdown-item">Single Page</a>
+                                    </div>
+                                </div>
+                                <a href="{{ url_for('contact') }}" class="nav-item nav-link">Contact</a>
+                            </div>
+                            <div class="ml-auto">
+                                <a class="btn" href="{{ url_for('contact') }}">Get Appointment</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Nav Bar End -->
+            
+            
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Our Legal Team</h2>
+                        </div>
+                        <div class="col-12">
+                            <a href="{{ url_for('index') }}">Home</a>
+                            <a href="{{ url_for('team') }}">Attorneys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+
+
+            <!-- About Start -->
+            <div class="about">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="about-img">
+                                <img src="{{ url_for('static', filename='img/about.jpg') }}" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="section-header">
+                                <h2>Our Expert Legal Team</h2>
+                            </div>
+                            <div class="about-text">
+                                <p>
+                                    At Kanun Law Firm, our attorneys are more than just legal professionals – they are dedicated advocates with a proven track record of success. Each member of our team brings unique expertise and a commitment to achieving the best possible outcomes for our clients.
+                                </p>
+                                <p>
+                                    With decades of combined experience across various practice areas, our attorneys have successfully handled complex cases ranging from high-stakes corporate litigation to sensitive family law matters. We believe in a collaborative approach, where our attorneys work together to leverage their collective knowledge and skills for your benefit.
+                                </p>
+                                <p>
+                                    Our team includes award-winning attorneys recognized by legal associations for their excellence, innovative legal strategies, and outstanding client service. We pride ourselves on staying at the forefront of legal developments to provide cutting-edge solutions.
+                                </p>
+                                <a class="btn" href="{{ url_for('service') }}">View Our Practice Areas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+            <!-- Team Start -->
+            <div class="team">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Meet Our Expert Attorneys</h2>
+                        <p>Each attorney brings specialized expertise and a commitment to excellence</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="{{ url_for('static', filename='img/team-1.jpg') }}" alt="Adam Phillips">
+                                    <div class="team-overlay">
+                                        <a href="{{ url_for('contact') }}" class="btn">Schedule Consultation</a>
+                                    </div>
+                                </div>
+                                <div class="team-text">
+                                    <h2>Adam Phillips</h2>
+                                    <p>Senior Partner - Business Law</p>
+                                    <div class="team-details">
+                                        <p><i class="fa fa-graduation-cap"></i> Harvard Law School, J.D.</p>
+                                        <p><i class="fa fa-award"></i> 20+ Years Experience</p>
+                                        <p><i class="fa fa-star"></i> Super Lawyers Rating</p>
+                                    </div>
+                                    <p class="team-bio">Specializes in corporate mergers, acquisitions, and complex business litigation with a focus on Fortune 500 companies.</p>
+                                    <div class="team-social">
+                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="{{ url_for('static', filename='img/team-2.jpg') }}" alt="Dylan Adams">
+                                    <div class="team-overlay">
+                                        <a href="{{ url_for('contact') }}" class="btn">Schedule Consultation</a>
+                                    </div>
+                                </div>
+                                <div class="team-text">
+                                    <h2>Dylan Adams</h2>
+                                    <p>Partner - Criminal Defense</p>
+                                    <div class="team-details">
+                                        <p><i class="fa fa-graduation-cap"></i> Yale Law School, J.D.</p>
+                                        <p><i class="fa fa-award"></i> 15+ Years Experience</p>
+                                        <p><i class="fa fa-star"></i> AV Preeminent Rating</p>
+                                    </div>
+                                    <p class="team-bio">Former prosecutor with extensive trial experience in federal and state criminal cases, including white-collar crime defense.</p>
+                                    <div class="team-social">
+                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="{{ url_for('static', filename='img/team-3.jpg') }}" alt="Gloria Edwards">
+                                    <div class="team-overlay">
+                                        <a href="{{ url_for('contact') }}" class="btn">Schedule Consultation</a>
+                                    </div>
+                                </div>
+                                <div class="team-text">
+                                    <h2>Gloria Edwards</h2>
+                                    <p>Partner - Family Law</p>
+                                    <div class="team-details">
+                                        <p><i class="fa fa-graduation-cap"></i> Stanford Law School, J.D.</p>
+                                        <p><i class="fa fa-award"></i> 18+ Years Experience</p>
+                                        <p><i class="fa fa-star"></i> Best Lawyers Award</p>
+                                    </div>
+                                    <p class="team-bio">Expert in complex divorce cases, child custody matters, and prenuptial agreements with a focus on amicable resolutions.</p>
+                                    <div class="team-social">
+                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="{{ url_for('static', filename='img/team-4.jpg') }}" alt="Josh Dunn">
+                                    <div class="team-overlay">
+                                        <a href="{{ url_for('contact') }}" class="btn">Schedule Consultation</a>
+                                    </div>
+                                </div>
+                                <div class="team-text">
+                                    <h2>Josh Dunn</h2>
+                                    <p>Partner - Immigration Law</p>
+                                    <div class="team-details">
+                                        <p><i class="fa fa-graduation-cap"></i> Columbia Law School, J.D.</p>
+                                        <p><i class="fa fa-award"></i> 12+ Years Experience</p>
+                                        <p><i class="fa fa-star"></i> Rising Star Award</p>
+                                    </div>
+                                    <p class="team-bio">Specializes in complex immigration cases, visa applications, deportation defense, and corporate immigration compliance.</p>
+                                    <div class="team-social">
+                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="{{ url_for('static', filename='img/team-1.jpg') }}" alt="Sarah Johnson">
+                                    <div class="team-overlay">
+                                        <a href="{{ url_for('contact') }}" class="btn">Schedule Consultation</a>
+                                    </div>
+                                </div>
+                                <div class="team-text">
+                                    <h2>Sarah Johnson</h2>
+                                    <p>Associate - Civil Litigation</p>
+                                    <div class="team-details">
+                                        <p><i class="fa fa-graduation-cap"></i> University of Chicago, J.D.</p>
+                                        <p><i class="fa fa-award"></i> 8+ Years Experience</p>
+                                        <p><i class="fa fa-star"></i> Super Lawyers Rising Star</p>
+                                    </div>
+                                    <p class="team-bio">Focuses on personal injury, medical malpractice, and civil rights litigation with multiple million-dollar verdicts.</p>
+                                    <div class="team-social">
+                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="{{ url_for('static', filename='img/team-2.jpg') }}" alt="Michael Chen">
+                                    <div class="team-overlay">
+                                        <a href="{{ url_for('contact') }}" class="btn">Schedule Consultation</a>
+                                    </div>
+                                </div>
+                                <div class="team-text">
+                                    <h2>Michael Chen</h2>
+                                    <p>Associate - Intellectual Property</p>
+                                    <div class="team-details">
+                                        <p><i class="fa fa-graduation-cap"></i> MIT & Harvard Law, J.D.</p>
+                                        <p><i class="fa fa-award"></i> 10+ Years Experience</p>
+                                        <p><i class="fa fa-star"></i> Patent Law Expert</p>
+                                    </div>
+                                    <p class="team-bio">Specializes in patent litigation, trademark registration, and technology licensing for startups and tech companies.</p>
+                                    <div class="team-social">
+                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="{{ url_for('static', filename='img/team-3.jpg') }}" alt="Rachel Martinez">
+                                    <div class="team-overlay">
+                                        <a href="{{ url_for('contact') }}" class="btn">Schedule Consultation</a>
+                                    </div>
+                                </div>
+                                <div class="team-text">
+                                    <h2>Rachel Martinez</h2>
+                                    <p>Associate - Real Estate Law</p>
+                                    <div class="team-details">
+                                        <p><i class="fa fa-graduation-cap"></i> Georgetown Law, J.D.</p>
+                                        <p><i class="fa fa-award"></i> 9+ Years Experience</p>
+                                        <p><i class="fa fa-star"></i> Real Estate Law Specialist</p>
+                                    </div>
+                                    <p class="team-bio">Expert in commercial real estate transactions, zoning law, landlord-tenant disputes, and property development.</p>
+                                    <div class="team-social">
+                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="{{ url_for('static', filename='img/team-4.jpg') }}" alt="David Wilson">
+                                    <div class="team-overlay">
+                                        <a href="{{ url_for('contact') }}" class="btn">Schedule Consultation</a>
+                                    </div>
+                                </div>
+                                <div class="team-text">
+                                    <h2>David Wilson</h2>
+                                    <p>Of Counsel - Tax Law</p>
+                                    <div class="team-details">
+                                        <p><i class="fa fa-graduation-cap"></i> NYU Law School, LL.M. Tax</p>
+                                        <p><i class="fa fa-award"></i> 25+ Years Experience</p>
+                                        <p><i class="fa fa-star"></i> Former IRS Attorney</p>
+                                    </div>
+                                    <p class="team-bio">Former IRS attorney specializing in tax controversy, international tax planning, and estate tax matters for high-net-worth individuals.</p>
+                                    <div class="team-social">
+                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team End -->
+
+
+            <!-- Newsletter Start -->
+            <div class="newsletter">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Subscribe Our Newsletter</h2>
+                        <p>Stay updated with legal insights from our expert attorneys</p>
+                    </div>
+                    <div class="form">
+                        <input class="form-control" placeholder="Enter your email">
+                        <button class="btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Newsletter End -->
+
+
+            <!-- Footer Start -->
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-about">
+                                <h2>About Kanun Law Firm</h2>
+                                <p>
+                                    Our team of dedicated attorneys combines legal excellence with personalized service. With diverse expertise across multiple practice areas, we provide comprehensive legal solutions tailored to each client's unique needs and goals.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-8">
+                            <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-link">
+                                <h2>Practice Areas</h2>
+                                <a href="{{ url_for('service') }}">Business Law</a>
+                                <a href="{{ url_for('service') }}">Criminal Defense</a>
+                                <a href="{{ url_for('service') }}">Family Law</a>
+                                <a href="{{ url_for('service') }}">Immigration Law</a>
+                                <a href="{{ url_for('service') }}">Civil Litigation</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-link">
+                                <h2>Useful Pages</h2>
+                                <a href="{{ url_for('about') }}">About Our Firm</a>
+                                <a href="{{ url_for('service') }}">Practice Areas</a>
+                                <a href="{{ url_for('team') }}">Our Attorneys</a>
+                                <a href="{{ url_for('portfolio') }}">Case Studies</a>
+                                <a href="{{ url_for('contact') }}">Schedule Consultation</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-contact">
+                                <h2>Get In Touch</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                <p><i class="fa fa-phone-alt"></i>+123 456 7890</p>
+                                <p><i class="fa fa-envelope"></i>info@kanunlaw.com</p>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="container footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FAQs</a>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a href="https://technoviaxtech.site">technoviaX Tech</a>, All Right Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Designed By <a href="https://technoviaxtech.site">technoviaX Tech</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+            
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        
+        <!-- Team Hover Effects -->
+        <style>
+            .team-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 123, 255, 0.9);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: 0.5s;
+            }
+            
+            .team-item:hover .team-overlay {
+                opacity: 1;
+            }
+            
+            .team-details {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+            
+            .team-details p {
+                margin: 5px 0;
+                color: #666;
+            }
+            
+            .team-details i {
+                color: #007bff;
+                margin-right: 5px;
+            }
+            
+            .team-bio {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+        </style>
+    </body>
+</html>
